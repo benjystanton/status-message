@@ -1,20 +1,48 @@
-{% extends "layouts/main.html" %}
+{% extends "home-office-kit-layout.html" %}
 
-{% set pageName="Home" %}
+{% block homeOfficeKit_style %}
+<!-- Add css to apply just to this page. For example:
+.my-style {
+  color: red;
+}
+The <style> tage is already included. -->
+{% endblock %}
+
+{# {% set pageName="Home" %} #}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">
+  {{ serviceName }}
+</h1>
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+<p class="govuk-body">This is a tiny prototype to demo some changes I'm proposing to the Status Message component.</p>
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
+<p class="govuk-body">This is not a real service.</p>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
-  </div>
+<div class="hods-status-message" role="status" aria-live="polite">
+  <h2 class="hods-status-message__status">Needs review</h2>
+    <div class="hods-status-message__extra">
+      <dl>
+        <div>
+          <dt>Assigned to </dt>
+          <dd>North Team</dd>
+        </div>
+        <div>
+          <dt>Claimed by </dt>
+          <dd>Kelvin Phillips</dd>
+        </div>
+        <div>
+          <dt>Review by </dt>
+          <dd><time class="hods-date-time" datetime="2024-08-31T19:00:00.000Z">31 August 2024, 19:00</time></dd>
+        </div>
+      </dl>
+    </div>
+    <ul class="hods-status-message__actions">
+      <li class="hods-status-message__actions__item hods-status-message__actions__item--active"><a class="hods-status-message__actions__link" href="#">Edit task</a></li>
+      <li class="hods-status-message__actions__item hods-status-message__actions__item--active"><a class="hods-status-message__actions__link" href="#">Assign task</a></li>
+      <li class="hods-status-message__actions__item hods-status-message__actions__item--active"><a class="hods-status-message__actions__link" href="#">Close task</a></li>
+    </ul>
 </div>
 
 {% endblock %}
