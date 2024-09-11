@@ -16,9 +16,7 @@ The <style> tage is already included. -->
   {{ serviceName }}
 </h1>
 
-<p class="govuk-body">This is a tiny prototype to demo some changes I'm proposing to the Status Message component.</p>
-
-<p class="govuk-body">This is not a real service.</p>
+<p class="govuk-body govuk-!-padding-bottom-7">This is a tiny prototype to demo some changes I'm proposing to the <a href="https://design.homeoffice.gov.uk/components?name=Status%20message" class="govuk-link">Status Message component</a>.</p>
 
 <div class="hods-status-message" role="status" aria-live="polite">
   <h2 class="hods-status-message__status">Needs review</h2>
@@ -43,6 +41,25 @@ The <style> tage is already included. -->
       <li class="hods-status-message__actions__item hods-status-message__actions__item--active"><a class="hods-status-message__actions__link" href="#">Assign task</a></li>
       <li class="hods-status-message__actions__item hods-status-message__actions__item--active"><a class="hods-status-message__actions__link" href="#">Close task</a></li>
     </ul>
+</div>
+
+<div class="govuk-grid-row govuk-!-padding-top-9">
+    <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-m">Changes made</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Change main status text from div to h2</li>
+            <li>Removed the extra div that wrapped the "Needs review" text and the 3 lines of text (don't think it was needed?)</li>
+            <li>Add role="status" aria-live="polite" to wrapping container</li>
+            <li>Add hods-date-time component</li>
+            <li>Changed the 3 lines of a text from a single paragraph with line breaks to a description list (some scruffy CSS here from me, needs improving)
+        </ul>
+    </div>
+    <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-m">Not done</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Ignored potential changes needed to the focus style of the buttons (for now, as out of scope for this component)</li>
+        </ul>
+    </div>
 </div>
 
 {% endblock %}
