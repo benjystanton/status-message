@@ -4,3 +4,35 @@
 // 
 
 // Add extra styles here
+
+.hods-page__body {
+    background-color:#f3f2f1;
+}
+
+.hods-status-message__status {
+    font-size:1rem;
+    -webkit-font-smoothing:antialiased;
+}
+
+@media (min-width: 40.0625em) {
+    .hods-status-message__status {
+        font-size:1.5rem;
+    }
+}
+
+.hods-status-message__extra dl {
+    display:block;
+    margin:0;
+}
+
+.hods-status-message div:first-child {
+    display:block;
+}
+
+.hods-status-message__extra dt, .hods-status-message__extra dd {
+    width:auto;
+    margin:0;
+    padding:0;
+    display:inline;
+    -webkit-font-smoothing:antialiased;
+}
